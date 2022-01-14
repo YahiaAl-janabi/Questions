@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+  body {
+    background-color: rgb(156, 196, 212);
+    .questions {
+      background-color: rgb(255, 255, 255);
+      width: 50vw;
+      margin-inline: auto;
+      margin-top: 25vh;
+      padding: 25px;
+      border-radius: 5px;
+      box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+        0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+
+      .title {
+        background-color: rgb(58, 94, 255);
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 25px;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      .question {
+        background-color: rgb(233, 233, 233);
+        margin-top: 10px;
+        border-radius: 5px;
+        .questionTitle {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+          .questionBtn {
+            display: grid;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            .minusBtn {
+              grid-column: 1;
+              grid-row: 1;
+              transition: 0.5s transform, opacity;
+              visibility: hidden;
+            }
+            .minusBtnInactive {
+              transform: rotate(180deg);
+              visibility: visible;
+            }
+            .plusBtn {
+              grid-column: 1;
+              grid-row: 1;
+              transition: 0.5s transform, opacity;
+            }
+            .plusBtnInactive {
+              transform: rotate(180deg);
+              visibility: hidden;
+            }
+          }
+        }
+        .questionText {
+          padding: 20px;
+          padding-top: 0;
+          height: 0vh;
+          overflow: hidden;
+          transition: height 1s;
+          hr {
+            width: 500px;
+            margin-inline: auto;
+            margin-bottom: 20px;
+            color: rgba(0, 0, 0, 0.377);
+          }
+        }
+        .questionTextActive {
+          height: 10vh;
+        }
+      }
+    }
+  }
+}
